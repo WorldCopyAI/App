@@ -120,7 +120,8 @@
 
             <CheckBox
                 android:id="@+id/johwi10"
-                android:layout_width="165dp"
+                android:layout_width="100dp"
+                android:gravity="center"
                 android:layout_height="wrap_content"
                 android:text="예"
                 android:onClick="checked"/>
