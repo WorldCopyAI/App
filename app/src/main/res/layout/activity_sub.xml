@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/corona"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:srcCompat="@tools:sample/avatars" />
+
+
+    <TextView
+        android:layout_margin="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="코로나 19 의심되는 증상(발열 37.5도이상, 기침, 호흡곤란, 오한 근육통, 두통, 인후통, 후각미각 소실, 폐렴등)이 있다."
+        android:textAllCaps="false"
+        />
+<TableLayout
+    android:id="@+id/ondo"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center">
+    <TableRow>
+
+
+        <CheckBox
+            android:id="@+id/ondo0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="예"
+            android:onClick="checked"
+            android:layout_marginRight="50dp"/>
+
+        <CheckBox
+            android:id="@+id/ondo1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="아니오"
+            android:onClick="checked"/>
+    </TableRow>
+    </TableLayout>
+    <TextView
+        android:layout_margin="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="본인 또는 동거인이 코로나 19 진단검사를 받고 결과를 기다리고 있나요?"
+        android:textAllCaps="false"/>
+    <TableLayout
+        android:id="@+id/jindan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+        <TableRow>
+
+
+            <CheckBox
+                android:id="@+id/jindan0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="예"
+                android:onClick="checked"
+                android:layout_marginRight="50dp"/>
+
+            <CheckBox
+                android:id="@+id/jindan1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="아니오"
+                android:onClick="checked"/>
+        </TableRow>
+    </TableLayout>
+    <TextView
+        android:layout_margin="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="본인 또는 동거인이 방역당국에 의해 자가격리가 이루어지고 있나요?"
+        android:textAllCaps="false"/>
+    <TableLayout
+        android:id="@+id/jaga"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+        <TableRow>
+
+
+            <CheckBox
+                android:id="@+id/jaga0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="예"
+                android:onClick="checked"
+                android:layout_marginRight="50dp"/>
+
+            <CheckBox
+                android:id="@+id/jaga1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="아니오"
+                android:onClick="checked"/>
+        </TableRow>
+    </TableLayout>
+    <TextView
+        android:layout_margin="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="본인 또는 동거인이 코로나 19 진단검사를 받고 결과를 기다리고 있나요?"
+        android:textAllCaps="false"/>
+    <TableLayout
+        android:id="@+id/johwi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+        <TableRow>
+
+
+            <CheckBox
+                android:id="@+id/johwi10"
+                android:layout_width="165dp"
+                android:layout_height="wrap_content"
+                android:text="예"
+                android:onClick="checked"/>
+
+
+        </TableRow>
+    </TableLayout>
+    <Button
+        android:id="@+id/Sendbtn"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="제출"
+
+
+        />
+
+</LinearLayout>
