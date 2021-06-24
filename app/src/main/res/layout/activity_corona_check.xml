@@ -24,11 +24,13 @@
         android:textAllCaps="false"
         />
     <RadioGroup
+        android:id="@+id/ondoradio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_gravity="center" >
         <RadioButton
+            android:id="@+id/ondoyesbutton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="예"
@@ -39,6 +41,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginRight="16dp"/>
         <RadioButton
+            android:id="@+id/ondonobutton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="아니오"
@@ -65,11 +68,13 @@
         android:text="본인 또는 동거인이 코로나 19 진단검사를 받고 결과를 기다리고 있나요?"
         android:textAllCaps="false"/>
     <RadioGroup
+        android:id="@+id/resultradio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_gravity="center" >
         <RadioButton
+            android:id="@+id/resultyesbutton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="예"
@@ -80,6 +85,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginRight="16dp"/>
         <RadioButton
+            android:id="@+id/resultnobutton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="아니오"
@@ -108,11 +114,13 @@
         android:text="본인 또는 동거인이 방역당국에 의해 자가격리가 이루어지고 있나요?"
         android:textAllCaps="false"/>
     <RadioGroup
+        android:id="@+id/isolradio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_gravity="center" >
         <RadioButton
+            android:id="@+id/isolyesbutton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="예"
@@ -123,6 +131,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginRight="16dp"/>
         <RadioButton
+            android:id="@+id/isolnobutton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="아니오"
@@ -156,11 +165,13 @@
         android:layout_gravity="center">
         <TableRow/>
         <RadioGroup
+            android:id="@+id/privradio"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_gravity="center" >
             <RadioButton
+                android:id="@+id/privyesbutton"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:text="예"
