@@ -14,120 +14,166 @@
 
 
     <TextView
-        android:layout_margin="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="5dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="코로나 19 의심되는 증상(발열 37.5도이상, 기침, 호흡곤란, 오한 근육통, 두통, 인후통, 후각미각 소실, 폐렴등)이 있다."
         android:textAllCaps="false"
         />
-<TableLayout
-    android:id="@+id/ondo"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_gravity="center">
-    <TableRow>
-
-
-        <CheckBox
-            android:id="@+id/ondo0"
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center" >
+        <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="예"
-            android:onClick="checked"
-            android:layout_marginRight="50dp"/>
-
-        <CheckBox
-            android:id="@+id/ondo1"
-            android:layout_width="match_parent"
+            android:button="@color/transparent"
+            android:background="@drawable/radio_selector"
+            android:elevation="4dp"
+            android:padding="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="16dp"/>
+        <RadioButton
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="아니오"
-            android:onClick="checked"/>
-    </TableRow>
-    </TableLayout>
+            android:button="@color/transparent"
+            android:background="@drawable/radio_selector"
+            android:elevation="4dp"
+            android:padding="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="16dp"/>
+
+    </RadioGroup>
+    <TableLayout
+    android:id="@+id/ondo"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"/>
     <TextView
-        android:layout_margin="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="5dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="본인 또는 동거인이 코로나 19 진단검사를 받고 결과를 기다리고 있나요?"
         android:textAllCaps="false"/>
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center" >
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="예"
+            android:button="@color/transparent"
+            android:background="@drawable/radio_selector"
+            android:elevation="4dp"
+            android:padding="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="16dp"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="아니오"
+            android:button="@color/transparent"
+            android:background="@drawable/radio_selector"
+            android:elevation="4dp"
+            android:padding="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="16dp"/>
+
+    </RadioGroup>
+
+
     <TableLayout
         android:id="@+id/jindan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center">
-        <TableRow>
-
-
-            <CheckBox
-                android:id="@+id/jindan0"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="예"
-                android:onClick="checked"
-                android:layout_marginRight="50dp"/>
-
-            <CheckBox
-                android:id="@+id/jindan1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="아니오"
-                android:onClick="checked"/>
-        </TableRow>
-    </TableLayout>
+        android:layout_gravity="center"/>
     <TextView
-        android:layout_margin="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="5dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="본인 또는 동거인이 방역당국에 의해 자가격리가 이루어지고 있나요?"
         android:textAllCaps="false"/>
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center" >
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="예"
+            android:button="@color/transparent"
+            android:background="@drawable/radio_selector"
+            android:elevation="4dp"
+            android:padding="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="16dp"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="아니오"
+            android:button="@color/transparent"
+            android:background="@drawable/radio_selector"
+            android:elevation="4dp"
+            android:padding="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="16dp"/>
+
+    </RadioGroup>
     <TableLayout
         android:id="@+id/jaga"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center">
-        <TableRow>
-
-
-            <CheckBox
-                android:id="@+id/jaga0"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="예"
-                android:onClick="checked"
-                android:layout_marginRight="50dp"/>
-
-            <CheckBox
-                android:id="@+id/jaga1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="아니오"
-                android:onClick="checked"/>
-        </TableRow>
-    </TableLayout>
+        android:layout_gravity="center"/>
     <TextView
-        android:layout_margin="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="5dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="본인 또는 동거인이 코로나 19 진단검사를 받고 결과를 기다리고 있나요?"
+        android:layout_gravity="center"
+        android:text="개인정보 수집•이용•조회하는 것에 동의합니까?"
         android:textAllCaps="false"/>
     <TableLayout
         android:id="@+id/johwi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center">
-        <TableRow>
-
-
-            <CheckBox
-                android:id="@+id/johwi10"
-                android:layout_width="100dp"
-                android:gravity="center"
+        <TableRow/>
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center" >
+            <RadioButton
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:text="예"
-                android:onClick="checked"/>
+                android:textAlignment="center"
+                android:button="@color/transparent"
+                android:background="@drawable/radio_selector"
+                android:elevation="4dp"
+                android:padding="16dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal" />
 
 
-        </TableRow>
+        </RadioGroup>
     </TableLayout>
     <Button
         android:id="@+id/Sendbtn"
