@@ -6,15 +6,34 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <ImageView
+    <TextView
         android:id="@+id/corona"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/black"
+        android:text="코로나19(COVID-19) 문진표"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold"
         tools:srcCompat="@tools:sample/avatars" />
 
 
     <TextView
-        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/Yellow"
+        android:text="경민대학교 코로나-19 대응 메뉴얼에 따라 감염병 예방을 위한 사전조사이오니 작성에 적극 협조하여 주시기 바랍니다."
+        android:textSize="15dp"
+        android:gravity="center_vertical"
+        android:textStyle="bold"
+
+        />
+
+    <TextView
+        android:layout_marginTop="10dp"
         android:layout_marginRight="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginBottom="5dp"
@@ -38,8 +57,10 @@
             android:background="@drawable/radio_selector"
             android:elevation="4dp"
             android:padding="16dp"
+            android:layout_marginLeft="5dp"
             android:layout_marginTop="10dp"
-            android:layout_marginRight="16dp"/>
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="25dp"/>
         <RadioButton
             android:id="@+id/ondonobutton"
             android:layout_width="wrap_content"
@@ -49,8 +70,9 @@
             android:background="@drawable/radio_selector"
             android:elevation="4dp"
             android:padding="16dp"
+            android:layout_marginRight="5dp"
             android:layout_marginTop="10dp"
-            android:layout_marginLeft="16dp"/>
+            android:layout_marginLeft="25dp"/>
 
     </RadioGroup>
     <TableLayout
@@ -59,7 +81,7 @@
     android:layout_height="wrap_content"
     android:layout_gravity="center"/>
     <TextView
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_marginRight="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginBottom="5dp"
@@ -82,8 +104,10 @@
             android:background="@drawable/radio_selector"
             android:elevation="4dp"
             android:padding="16dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="5dp"
             android:layout_marginTop="10dp"
-            android:layout_marginRight="16dp"/>
+            android:layout_marginRight="25dp"/>
         <RadioButton
             android:id="@+id/resultnobutton"
             android:layout_width="wrap_content"
@@ -93,8 +117,9 @@
             android:background="@drawable/radio_selector"
             android:elevation="4dp"
             android:padding="16dp"
+            android:layout_marginRight="5dp"
             android:layout_marginTop="10dp"
-            android:layout_marginLeft="16dp"/>
+            android:layout_marginLeft="25dp"/>
 
     </RadioGroup>
 
@@ -105,7 +130,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"/>
     <TextView
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_marginRight="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginBottom="5dp"
@@ -128,8 +153,10 @@
             android:background="@drawable/radio_selector"
             android:elevation="4dp"
             android:padding="16dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="5dp"
             android:layout_marginTop="10dp"
-            android:layout_marginRight="16dp"/>
+            android:layout_marginRight="25dp"/>
         <RadioButton
             android:id="@+id/isolnobutton"
             android:layout_width="wrap_content"
@@ -139,8 +166,9 @@
             android:background="@drawable/radio_selector"
             android:elevation="4dp"
             android:padding="16dp"
+            android:layout_marginRight="5dp"
             android:layout_marginTop="10dp"
-            android:layout_marginLeft="16dp"/>
+            android:layout_marginLeft="25dp"/>
 
     </RadioGroup>
     <TableLayout
@@ -149,7 +177,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"/>
     <TextView
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_marginRight="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginBottom="5dp"
@@ -172,7 +200,7 @@
             android:layout_gravity="center" >
             <RadioButton
                 android:id="@+id/privyesbutton"
-                android:layout_width="150dp"
+                android:layout_width="175dp"
                 android:layout_height="wrap_content"
                 android:text="예"
                 android:textAlignment="center"
@@ -180,21 +208,24 @@
                 android:background="@drawable/radio_selector"
                 android:elevation="4dp"
                 android:padding="16dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
                 android:layout_marginTop="10dp"
                 android:gravity="center_horizontal" />
 
 
         </RadioGroup>
     </TableLayout>
+
     <Button
         android:id="@+id/Sendbtn"
-        android:layout_marginTop="20dp"
-        android:layout_width="match_parent"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
         android:gravity="center"
         android:text="제출"
-
-
         />
 
 </LinearLayout>
