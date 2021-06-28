@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Tests</string>
+    <string name="firebase_web_client_id">"client_id": "1025074699333-sep9315piethrn74lrcp8k6oahdp01uf.apps.googleusercontent.com",
+            "client_type": 3,
+            "android_info": {
+            "package_name": "com.example.tests",
+            "certificate_hash": "b6e0060253fb264e7380d4717170af87bbef2c8e"</string>
 </resources>
