@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/white">
 
     <TextView
         android:id="@+id/corona"
@@ -25,6 +26,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/Yellow"
+        android:textColor="@color/black"
         android:text="경민대학교 코로나-19 대응 메뉴얼에 따라 감염병 예방을 위한 사전조사이오니 작성에 적극 협조하여 주시기 바랍니다."
         android:textSize="15dp"
         android:gravity="center_vertical"
@@ -39,6 +41,7 @@
         android:layout_marginBottom="5dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/black"
         android:text="코로나 19 의심되는 증상(발열 37.5도이상, 기침, 호흡곤란, 오한 근육통, 두통, 인후통, 후각미각 소실, 폐렴등)이 있다."
         android:textAllCaps="false"
         />
@@ -53,6 +56,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="예"
+            android:textColor="@color/black"
             android:button="@color/transparent"
             android:background="@drawable/radio_selector"
             android:elevation="4dp"
@@ -66,6 +70,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="아니오"
+            android:textColor="@color/black"
             android:button="@color/transparent"
             android:background="@drawable/radio_selector"
             android:elevation="4dp"
@@ -87,6 +92,7 @@
         android:layout_marginBottom="5dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/black"
         android:text="본인 또는 동거인이 코로나 19 진단검사를 받고 결과를 기다리고 있나요?"
         android:textAllCaps="false"/>
     <RadioGroup
@@ -100,6 +106,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="예"
+            android:textColor="@color/black"
             android:button="@color/transparent"
             android:background="@drawable/radio_selector"
             android:elevation="4dp"
@@ -113,6 +120,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="아니오"
+            android:textColor="@color/black"
             android:button="@color/transparent"
             android:background="@drawable/radio_selector"
             android:elevation="4dp"
@@ -136,6 +144,7 @@
         android:layout_marginBottom="5dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/black"
         android:text="본인 또는 동거인이 방역당국에 의해 자가격리가 이루어지고 있나요?"
         android:textAllCaps="false"/>
     <RadioGroup
@@ -149,6 +158,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="예"
+            android:textColor="@color/black"
             android:button="@color/transparent"
             android:background="@drawable/radio_selector"
             android:elevation="4dp"
@@ -162,6 +172,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="아니오"
+            android:textColor="@color/black"
             android:button="@color/transparent"
             android:background="@drawable/radio_selector"
             android:elevation="4dp"
@@ -184,6 +195,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:textColor="@color/black"
         android:text="개인정보 수집•이용•조회하는 것에 동의합니까?"
         android:textAllCaps="false"/>
     <TableLayout
@@ -203,6 +215,7 @@
                 android:layout_width="175dp"
                 android:layout_height="wrap_content"
                 android:text="예"
+                android:textColor="@color/black"
                 android:textAlignment="center"
                 android:button="@color/transparent"
                 android:background="@drawable/radio_selector"
@@ -226,6 +239,7 @@
         android:layout_gravity="center"
         android:gravity="center"
         android:text="제출"
+        android:textColor="@color/white"
         />
 
 </LinearLayout>

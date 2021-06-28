@@ -44,11 +44,13 @@ class LoginActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailedLis
 
         btnGoogle = findViewById(R.id.btn_google)
         btnGoogle.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
 
             var signinIntent:Intent = googleSignInClient.signInIntent
             //intent.putExtra()
             startActivityForResult(signinIntent, REQ_SING_GOOGLE)
+
+            startActivity(intent)
+            val intent = Intent(this, MainActivity::class.java)
         }
 
     }
@@ -61,34 +63,7 @@ class LoginActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailedLis
         TODO("Not yet implemented")
     }
 
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        toast("이게 실행은 되냐?")
-        if (requestCode == REQ_SING_GOOGLE) {
-            // 구글 로그인 성공시 넘어오는 토큰 값을 받음
-            val task = GoogleSignIn.getSignedInAccountFromIntent(data)
-            // ApiException 캐치 (task 값에 있는 결과를 가져옴 -> 이넘이 구글 로그인 정보를 갖는 것 같음)
-            val account = task.getResult(ApiException::class.java)
-            if(account === null){
-                toast("로그인 못해 새꺄")
-                return
-            }
-            // 구글 로그인에 성공했다는 인증서
-            val credential = GoogleAuthProvider.getCredential(account.idToken, null)
-            FirebaseAuth.getInstance().signInWithCredential(credential)
-                .addOnCompleteListener {
-                    if (task.isSuccessful) { //구글 로그인 성공시
-                        toast("성공")
-                        val intent = Intent(this, MainActivity::class.java)
-                        intent.putExtra("nickName", account.displayName)
-                        intent.putExtra("profile", account.photoUrl.toString())
-                        startActivity(intent)
-                    } else {// 구글 로그인 실패시
-                        toast(task.exception.toString())
-                    }
-                }
-        }
-    }
+
 
     private fun toast(s: String) {
         Toast.makeText(this, s, Toast.LENGTH_SHORT).show()
