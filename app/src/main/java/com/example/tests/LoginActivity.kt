@@ -16,14 +16,13 @@ import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailedListener {
     private val backHandler = BackButton(this)
-    private lateinit var btnGoogle: SignInButton          // 구글 로그인용 버튼
-    private var auth: FirebaseAuth? = null                   // 파이어베이스 인증용 객체
-    private var googleApiClient: GoogleApiClient? = null    // 구글 API 클라이언트 객체
+    private lateinit var btnGoogle: SignInButton                  // 구글 로그인용 버튼
+    private val auth: FirebaseAuth = FirebaseAuth.getInstance()   // 파이어베이스 인증용 객체
+    private var googleApiClient: GoogleApiClient? = null          // 구글 API 클라이언트 객체
 
     companion object {
         const val REQ_SING_GOOGLE: Int = 100 // 구글 로그인 결과 코드
     }
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,7 +40,6 @@ class LoginActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailedLis
             .requestEmail()
             .build()
 
-        auth = FirebaseAuth.getInstance() // 파이어베이스 인증 객체 초기화
         var googleSignInClient = GoogleSignIn.getClient(this, googleSignInOptions)
 
         btnGoogle = findViewById(R.id.btn_google)
@@ -69,16 +67,19 @@ class LoginActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailedLis
             val task = GoogleSignIn.getSignedInAccountFromIntent(data)
             // ApiException 캐치 (task 값에 있는 결과를 가져옴 -> 이넘이 구글 로그인 정보를 갖는 것 같음)
             val account = task.getResult(ApiException::class.java)
+            if(account === null){
+                toast("로그인 못해 새꺄")
+                return
+            }
             // 구글 로그인에 성공했다는 인증서
-            val credential = GoogleAuthProvider.getCredential(account?.idToken, null)
-
+            val credential = GoogleAuthProvider.getCredential(account.idToken, null)
             FirebaseAuth.getInstance().signInWithCredential(credential)
                 .addOnCompleteListener {
                     if (task.isSuccessful) { //구글 로그인 성공시
                         toast("성공")
                         val intent = Intent(this, MainActivity::class.java)
-                        intent.putExtra("nickName", account?.getDisplayName())
-                        intent.putExtra("profile", account?.getPhotoUrl().toString())
+                        intent.putExtra("nickName", account.displayName)
+                        intent.putExtra("profile", account.photoUrl.toString())
                         startActivity(intent)
                     } else {// 구글 로그인 실패시
                         toast(task.exception.toString())
