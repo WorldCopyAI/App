@@ -45,8 +45,10 @@ class LoginActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailedLis
         btnGoogle = findViewById(R.id.btn_google)
         btnGoogle.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
+
+            var signinIntent:Intent = googleSignInClient.signInIntent
             //intent.putExtra()
-            startActivityForResult(intent, REQ_SING_GOOGLE)
+            startActivityForResult(signinIntent, REQ_SING_GOOGLE)
         }
 
     }
@@ -91,7 +93,6 @@ class LoginActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailedLis
     private fun toast(s: String) {
         Toast.makeText(this, s, Toast.LENGTH_SHORT).show()
     }
-
 
 }
 
