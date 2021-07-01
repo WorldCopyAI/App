@@ -1,28 +1,44 @@
 package com.example.tests
 
 import android.content.Intent
+import android.nfc.NdefRecord
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.activity_main.*
+import java.nio.charset.Charset
+import java.util.*
 
-class MainActivity : AppCompatActivity() {
+
+
+class MainActivity : SendNFC()  {
     private val backHandler = BackButton(this)
     private var changeView: Boolean = false
     private lateinit var tvResult: TextView // 닉네임 텍스트
     private lateinit var ivProfile: ImageView //프로필 이미지 뷰
 
+    //nfc
+    private lateinit var text : TextView
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        text = findViewById(R.id.text)
+
+
+        btnNFC.setOnClickListener{
+
+        }
 
         // 버튼 클릭시 이미지 변경
         btn1.setOnClickListener {
             viewChange()
         }
+
 
         val intent: Intent = Intent()
         val nickname: String = intent.getStringExtra("nickName") ?: "" // 첫번째 창에서 닉네임을 전달받음
@@ -52,6 +68,5 @@ class MainActivity : AppCompatActivity() {
             changeView = false
         }
     }
-
 
 }
