@@ -1,42 +1,53 @@
 package com.example.tests
 
 import android.content.Intent
-import android.nfc.NdefRecord
+import android.nfc.NfcAdapter
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.activity_main.*
-import java.nio.charset.Charset
-import java.util.*
 
 
-
-class MainActivity : SendNFC()  {
+class MainActivity : AppCompatActivity()  {
     private val backHandler = BackButton(this)
     private var changeView: Boolean = false
     private lateinit var tvResult: TextView // 닉네임 텍스트
     private lateinit var ivProfile: ImageView //프로필 이미지 뷰
 
+
     //nfc
-    private lateinit var text : TextView
+    private lateinit var nfcButton : Button
+    lateinit var nfcAdapter: NfcAdapter
+    private lateinit var txNfc : TextView
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        text = findViewById(R.id.text)
+        nfcButton = findViewById(R.id.btnNFC)
+        txNfc =  findViewById(R.id.txNFC)
 
-
-        btnNFC.setOnClickListener{
-
+        // 해당 단말기의 nfc정보를 가져오기
+        nfcAdapter = NfcAdapter.getDefaultAdapter(this)
+        // NFC 여부 확인
+        if(nfcAdapter == null){
+            Toast.makeText(this,"NFC가 없습니다.",Toast.LENGTH_LONG).show()
+            finish()
         }
 
         // 버튼 클릭시 이미지 변경
         btn1.setOnClickListener {
             viewChange()
+        }
+
+        nfcButton.setOnClickListener{
+            txNfc.text = nfcAdapter.toString()
         }
 
 
@@ -68,5 +79,6 @@ class MainActivity : SendNFC()  {
             changeView = false
         }
     }
+
 
 }

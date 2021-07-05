@@ -9,7 +9,8 @@ import java.nio.charset.Charset
 import java.util.*
 
 open class SendNFC : AppCompatActivity() {
-    private var nfcAdapter: NfcAdapter = NfcAdapter.getDefaultAdapter(null)
+    var nfcAdapter: NfcAdapter = NfcAdapter.getDefaultAdapter(null)
+
 
     var mNdeMessage = NdefMessage( createNewTextRecord("이름 : 홍길동", Locale.ENGLISH, true))
 
