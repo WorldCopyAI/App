@@ -84,6 +84,8 @@
         android:layout_marginTop="476dp"
         android:text="NFC 데이터"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="#00000000"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
