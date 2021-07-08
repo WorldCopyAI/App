@@ -1,7 +1,8 @@
 package com.example.tests
 
 import android.content.Intent
-import android.nfc.NfcAdapter
+import android.nfc.*
+import android.nfc.NdefRecord
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
@@ -35,9 +36,9 @@ class MainActivity : AppCompatActivity()  {
 
         // 해당 단말기의 nfc정보를 가져오기
         nfcAdapter = NfcAdapter.getDefaultAdapter(this)
-        // NFC 여부 확인
-        if(nfcAdapter == null){
-            Toast.makeText(this,"NFC가 없습니다.",Toast.LENGTH_LONG).show()
+        if (nfcAdapter == null) {
+            // Stop here, we definitely need NFC
+            Toast.makeText(this, "This device doesn't support NFC.", Toast.LENGTH_LONG).show()
             finish()
         }
 
@@ -47,8 +48,11 @@ class MainActivity : AppCompatActivity()  {
         }
 
         nfcButton.setOnClickListener{
-            txNfc.text = nfcAdapter.toString()
+           txNfc.text = nfcAdapter.toString()
         }
+
+
+
 
 
         val intent: Intent = Intent()

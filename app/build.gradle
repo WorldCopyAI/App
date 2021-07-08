@@ -4,7 +4,13 @@ plugins {
     id 'kotlin-android-extensions'
 
 }
+apply plugin: 'com.android.application'
 apply plugin: 'com.google.gms.google-services'
+
+dependencies {
+
+}
+
 
 android {
     compileSdkVersion 30
@@ -50,9 +56,15 @@ dependencies {
     implementation 'com.google.firebase:firebase-analytics:19.0.0'      // 파이어베이스 앱 분석
     implementation 'com.google.firebase:firebase-core:19.0.0'           // 파이어베이스 코어
     implementation 'com.google.firebase:firebase-auth:21.0.1'           // 파이어베이스 인증
-    implementation 'com.firebaseui:firebase-ui-auth:6.4.0'              // 파이어베이스 인증2
+    implementation 'com.firebaseui:firebase-ui-auth:6.4.0'// 파이어베이스 인증2
     implementation 'com.github.bumptech.glide:glide:4.12.0'             // 글라이드 이미지 로딩(firebase 저장소에 업로드한 이미지를 glide라이브러리를 이용하여 이미지뷰에 불러오기)
     annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'     // 위 코드와 세트로 같이 사용되는 코드
+
+    implementation platform('com.google.firebase:firebase-bom:28.1.0')
+
+    // Declare the dependency for the Firebase Authentication library
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+    implementation 'com.google.firebase:firebase-auth-ktx'
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'

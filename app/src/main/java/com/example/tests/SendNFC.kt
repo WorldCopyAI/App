@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import java.nio.charset.Charset
 import java.util.*
 
-open class SendNFC : AppCompatActivity() {
+open class SendNFC:AppCompatActivity() {
     var nfcAdapter: NfcAdapter = NfcAdapter.getDefaultAdapter(null)
 
 
