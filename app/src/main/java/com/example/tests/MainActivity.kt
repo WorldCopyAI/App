@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity() {
         // 버튼 클릭시 이미지 변경
         btn1.setOnClickListener{
             if(!changeView){
+
                 imageView2.visibility = View.INVISIBLE
                 imageView3.visibility = View.VISIBLE
                 changeView = true
