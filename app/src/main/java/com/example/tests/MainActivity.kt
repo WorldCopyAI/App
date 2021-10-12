@@ -14,6 +14,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         // 버튼 클릭시 이미지 변경
+        // git Test
         btn1.setOnClickListener{
             if(!changeView){
 
